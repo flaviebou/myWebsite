@@ -130,6 +130,93 @@ p {
     padding-left: 0
 }
 
+/*timeline*/
+.hori-timeline .events {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Distribute space evenly */
+    border-top: 2px solid black;
+}
+
+.hori-timeline .events .event-list {
+    display: flex; /* Keep the display as flex for items */
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center content horizontally */
+    position: relative;
+    width: 20%; /* Set each item to take 20% of the width */
+    padding-top: 45px; /* Top padding for spacing */
+    opacity:0;
+    animation : fadeIn 1s forwards;
+}
+
+#item2{
+    animation-delay:1s
+}
+#item3{
+    animation-delay:2s
+}
+#item4{
+    animation-delay:3s
+}
+#item5{
+    animation-delay:4s
+}
+#item6{
+    animation-delay:5s
+}
+
+.hori-timeline .events .event-list:before {
+    content: "";
+    position: absolute;
+    height: 36px;
+    border-right: 2px dashed black;
+    top: 0;
+    left: 50%; /* Center the line */
+    transform: translateX(-50%); /* Center adjustment */
+}
+
+.timeline-title {
+    font-size: 1rem;
+    font-weight: bold; /* Make title stand out */
+    color: #343a40; /* Dark color for visibility */
+}
+
+.timeline-text {
+    font-size: 0.8rem;
+    color: #6c757d; /* Lighter text color */
+}
+
+.hori-timeline .events .event-list:hover {
+    background-color: #f8f9fa; /* Light background on hover */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow on hover */
+}
+
+@media (max-width: 768px) {
+    .hori-timeline .events {
+        flex-direction: column; /* Stack vertically on small screens */
+    }
+
+    .hori-timeline .events .event-list {
+        width: 100%; /* Full width for items */
+        padding-top: 20px; /* Reduce padding */
+    }
+
+    .hori-timeline .events .event-list:before {
+        height: 0; /* Remove vertical line on small screens */
+    }
+}
+
+#timeline {
+    border: none;
+    margin-bottom: 24px;
+    box-shadow: 0 0 13px 0 rgba(236, 236, 241, 0.44);
+}
+
+@keyframes fadeIn {
+    to{
+    opacity:1
+    }
+}
+
 /*footer*/
 #links{
     display: flex;
@@ -150,3 +237,4 @@ a{
     background-color: #007bff44;
     color: #fff;
 }
+
