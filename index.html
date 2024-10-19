@@ -3,15 +3,18 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta proprety="og:title" content="Flavie's website">
+        <meta proprety="og:type" content="website">
+        <meta proprety="og:image" content="moi.jpg">
+        <meta proprety="og:URL" content="https://flavie-bouteille.com">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="style.css">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
         <title> Flavie Bouteille </title>
     </head>
     <body>
-        <div class="container">
-            <header>
-            <div class="row" style="display: flex; align-items: center; gap: 10px;">
+        <header>
+            <div class="row" style="display: flex; align-items: center; gap: 10px; margin:0 1rem;">
                 <a href="mailto:bouteilleflavie@hotmail.fr" class="btn btn-dark" id='contact'>Contact me</a>
                 <a href="https://drive.google.com/file/d/1pqknNmzhfSlqJf55qaZ4xUTGhc-Tpi3d/view">
                     <img class="icons" src="curriculum-vitae.png" alt="logo of a cv" />
@@ -22,19 +25,25 @@
                 <a class="iconns" href="https://github.com/flaviebou">
                     <img class="icons" src="github.png" alt="logo of github" />
                 </a>
+                <a href="#experience"> MY EXPERIENCE</a>
+                <a href="#skills"> MY SKILLS</a>
+                <a href="#projects"> MY PROJECTS</a>
             </div>
-            </header>
-            <main>
-            <div class="row">
-                <div class="col-12 col-lg-6">
+        </header>
+        <main>
+            <section class="section">
+            <div id="prescontainer">
+                <div class="presentation-item">
                     <h1>Hi I'm Flavie</h1>
                     <p><i> I'm a French frontend developer. I love puzzle-solving and working with users. My passion is to make other people's life easier.</i></p>
                 </div>
-                <div class="col-12 col-lg-6">
+                <div class="presentation-item">
                     <img id="moi" src="moi.jpg" class="sliding-image" alt="black and white photo of me">
                 </div>
             </div>
-            <section class="my-section text-center">
+            <div class="circle"></div>
+            </section>
+            <section class="my-section text-center" id="experience">
                 <h2 class="section-heading">MY EXPERIENCE</h2>
                 <div class="row">
                     <div class="col-lg-12">
@@ -128,7 +137,7 @@
                     </div>
                 </div>
             </section>
-            <section class="my-section text-center">
+            <section class="my-section text-center" id="skills">
                 <h2 class="section-heading">MY SKILLS</h2>
                 <div class="row justify-content-center">
                     <div class="col-5">
@@ -136,11 +145,15 @@
                             <div class="card-body">
                                 <h3 class="card-title"> Soft skills </h3>
                                 <ul class="custom-list text-center">
+                                    <li>User-centric</li>
+                                    <li>Adaptability</li>
+                                    <li>Problem-solving</li>
                                     <li>Project management</li>
                                     <li>Public speaking</li>
                                     <li>Change management</li>
                                     <li>Interdepartmental collaboration</li>
-                                    <li>Creative</li>
+                                    <li>Requirement gathering</li>
+                                    <li>Communication</li>
                                 </ul>
                             </div>
                         </div>
@@ -154,6 +167,10 @@
                                     <li>CSS</li>
                                     <li>Javascript</li>
                                     <li>React</li>
+                                    <li>Jira</li>
+                                    <li>CRM/Salesforce</li>
+                                    <li>Scrum methodology</li>
+                                    <li>Data Visualization</li>
                                     <li>Git</li>
                                 </ul>
                             </div>
@@ -161,15 +178,45 @@
                     </div>
                 </div>
             </section>
-            </main>
-            <footer>
+            <section class="my-section text-center" id="projects">
+                <h2 class="section-heading">MY PROJECTS</h2>
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
+                        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
+                        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="Project 1.png"  style="height:20rem;width: 50rem; border-radius: 10px;margin: 1rem;" alt="Project 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="Project2.png"  style="height:20rem; width: 50rem;border-radius: 10px;margin: 1rem;" alt="Project 2">        
+                        </div>
+                        <div class="carousel-item">
+                            <img src="Project4.png"  style="height:20rem; width: 50rem;border-radius: 10px;margin: 1rem;" alt="Project 3">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </a>
+                </div>
+            </section>
+        </main>
+        <footer>
             <div class="row" id="links">
                 <a id="cv" href="https://drive.google.com/file/d/1pqknNmzhfSlqJf55qaZ4xUTGhc-Tpi3d/view"> My CV </a>
                 <a  id="Linkedin" href="https://www.linkedin.com/in/flavie-bouteille-b45b8b170/"> My Linkedin </a>
                 <a id="github" href="https://github.com/flaviebou"> My Github </a>
             </div>
-            
-            </footer>
-        </div>
+        </footer>
+        <button onclick="topFunction()" id="topBtn" title="Go to top">Top</button>
+        <script src="script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     </body>
 </html>
